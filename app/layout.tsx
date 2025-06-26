@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import { ThemeProvider } from "@/app/components/providers/ThemeProvider";
 import { PageTransitionProvider } from "./components/providers/PageTransitionProvider";
+import NavBar from "./components/NavBar";
 
 
 export const metadata: Metadata = {
@@ -20,7 +21,10 @@ export default function RootLayout({
         className={`antialiased`}
       >
         <PageTransitionProvider>
-          <ThemeProvider>{children}</ThemeProvider>
+          <ThemeProvider>
+            <NavBar />
+            {children}
+          </ThemeProvider>
         </PageTransitionProvider>
       </body>
     </html>

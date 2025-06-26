@@ -21,6 +21,7 @@ export const AVAILABLE_FONTS = [
   { name: "Nunito", className: "font-nunito" },
   { name: "Poppins", className: "font-poppins" },
   { name: "Playfair Display", className: "font-playfair" },
+  { name: "Lily Script One", className: "font-lily" },
 ] as const;
 
 export interface ThemeStore {
@@ -37,22 +38,12 @@ export interface ThemeStore {
 export const DEFAULT_THEMES: Record<string, ThemeData> = {
   light: {
     name: "light",
-    typeFaceClass: "font-inter",
-    typeFaceName: "Inter",
-    primaryColor: "#000000",
-    secondaryColor: "#D3D3D3",
-    accentColor: "#0066cc",
-    backgroundColor: "#ffffff",
-    foregroundColor: "#000000",
-  },
-  dark: {
-    name: "dark",
-    typeFaceClass: "font-inter",
-    typeFaceName: "Inter",
-    primaryColor: "#ffffff",
-    secondaryColor: "#cccccc",
-    accentColor: "#4d9eff",
-    backgroundColor: "#1a1a1a",
-    foregroundColor: "#ffffff",
+    typeFaceClass: "font-lily",
+    typeFaceName: "Lily Script One",
+    primaryColor: "#CE8147", // Caramel
+    secondaryColor: "#FCDEBE", // Cream
+    accentColor: "#B8D8BA", // Light green
+    backgroundColor: "#ffffff", // White
+    foregroundColor: "#4B3C25", // Dark brown
   },
 };

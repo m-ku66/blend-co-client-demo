@@ -88,7 +88,7 @@ export const PageTransitionProvider = ({ children }: PageTransitionProviderProps
         // Also ensure modal is explicitly closed (double safety!)
         closeModal();
 
-        console.log('UI state reset complete - starting route transition');
+        // console.log('UI state reset complete - starting route transition');
 
         // Start exit animation
         setIsExiting(true);
@@ -110,7 +110,7 @@ export const PageTransitionProvider = ({ children }: PageTransitionProviderProps
                 onExitComplete={() => {
                     if (typeof window !== 'undefined') {
                         window.scrollTo({ top: 0, behavior: 'smooth' });
-                        console.log('Exit animation complete - UI clean slate achieved!');
+                        // console.log('Exit animation complete - UI clean slate achieved!');
                     }
                 }}
             >
